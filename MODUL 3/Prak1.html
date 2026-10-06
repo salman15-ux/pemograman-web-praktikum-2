@@ -1,23 +1,572 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
- <meta charset="UTF-8">
- <title>Latihan CSS Internal</title>
- <style>
- h1 { color: #1b3c6b; }
- </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UMPKU Surakarta | Universitas Muhammadiyah PKU Surakarta</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- <h1>UMPKU SURAKARTA</h1>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="hero" id="beranda">
+
+        <nav class="navbar">
+
+            <a href="#beranda" class="logo">
+
+                <img src="logo-umpku.jpg" alt="Logo UMPKU">
+
+                <div class="logo-text">
+                    <strong>UMPKU</strong>
+                    <span>Surakarta</span>
+                </div>
+
+            </a>
+
+
+            <div class="nav-menu">
+
+                <a href="#beranda" class="active">
+                    Beranda
+                </a>
+
+                <a href="#profil">
+                    Profil
+                </a>
+
+                <a href="#keunggulan">
+                    Keunggulan
+                </a>
+
+                <a href="#layanan">
+                    Layanan
+                </a>
+
+                <a href="#kontak">
+                    Kontak
+                </a>
+
+            </div>
+
+
+            <a href="#kontak" class="nav-button">
+                🎓 &nbsp; Hubungi Kami
+            </a>
+
+        </nav>
+
+
+        <!-- ================= HERO CONTENT ================= -->
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                ✦ &nbsp; PRAKTIKUM PEMROGRAMAN WEB
+            </div>
+
+
+            <h1>
+                Universitas Muhammadiyah
+                <span>PKU Surakarta</span>
+            </h1>
+
+
+            <p>
+                Membangun generasi unggul melalui pendidikan,
+                teknologi, dan inovasi untuk masa depan yang lebih baik.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#profil" class="btn-primary">
+                    Jelajahi Kampus
+                    <span>→</span>
+                </a>
+
+                <a href="#layanan" class="btn-outline">
+                    ▦ &nbsp; Lihat Layanan
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-side-text">
+            Berilmu<br>
+            Berakhlak<br>
+            Berdampak
+        </div>
+
+
+        <div class="hero-bottom">
+
+            <div>
+                <span>SCROLL UNTUK MENJELAJAHI</span>
+                <strong>↓</strong>
+            </div>
+
+            <div class="hero-line"></div>
+
+            <div class="tahun">
+                EST. <strong>1960</strong>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PROFIL ================= -->
+
+    <section class="profil section" id="profil">
+
+        <div class="section-label">
+            TENTANG KAMI
+        </div>
+
+
+        <div class="profil-grid">
+
+            <div class="profil-title">
+
+                <h2>
+                    Pendidikan yang
+                    <span>menginspirasi.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="profil-text">
+
+                <p class="teks-besar">
+                    Universitas Muhammadiyah PKU Surakarta merupakan
+                    institusi pendidikan yang menjadi bagian dari
+                    perjalanan mahasiswa dalam meraih pengetahuan
+                    dan pengalaman.
+                </p>
+
+                <p>
+                    Melalui kegiatan akademik, pembelajaran, teknologi,
+                    dan pengembangan potensi mahasiswa, kampus menjadi
+                    tempat untuk mempersiapkan generasi yang kompeten
+                    dan siap menghadapi tantangan masa depan.
+                </p>
+
+
+                <a href="#keunggulan" class="text-button">
+                    Kenali lebih jauh
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROFIL BAWAH -->
+
+        <div class="profil-bawah">
+
+            <div class="foto-kampus">
+
+                <div class="foto-overlay"></div>
+
+                <div class="foto-caption">
+                    <strong>UMPKU</strong>
+                    <span>Universitas Muhammadiyah PKU Surakarta</span>
+                </div>
+
+            </div>
+
+
+            <div class="profil-poin">
+
+                <div class="poin">
+                    <div class="poin-icon">
+                        📖
+                    </div>
+
+                    <strong>01</strong>
+
+                    <span>
+                        Lingkungan Akademik
+                    </span>
+                </div>
+
+
+                <div class="poin">
+                    <div class="poin-icon">
+                        💻
+                    </div>
+
+                    <strong>02</strong>
+
+                    <span>
+                        Pembelajaran Modern
+                    </span>
+                </div>
+
+
+                <div class="poin">
+                    <div class="poin-icon">
+                        👥
+                    </div>
+
+                    <strong>03</strong>
+
+                    <span>
+                        Pengembangan Mahasiswa
+                    </span>
+                </div>
+
+
+                <div class="poin">
+                    <div class="poin-icon">
+                        ★
+                    </div>
+
+                    <strong>04</strong>
+
+                    <span>
+                        Berorientasi Masa Depan
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= KEUNGGULAN ================= -->
+
+    <section class="keunggulan section" id="keunggulan">
+
+        <div class="section-label">
+            KEUNGGULAN
+        </div>
+
+
+        <div class="keunggulan-header">
+
+            <div>
+
+                <h2>
+                    Ruang untuk
+                    <span>bertumbuh.</span>
+                </h2>
+
+            </div>
+
+
+            <p>
+                Pendidikan bukan hanya tentang belajar di dalam kelas,
+                tetapi juga tentang pengalaman, kreativitas, dan
+                keberanian untuk berkembang.
+            </p>
+
+        </div>
+
+
+        <div class="keunggulan-grid">
+
+            <article class="keunggulan-card">
+
+                <div class="card-top">
+                    <span>01</span>
+
+                    <div class="card-icon orange">
+                        🎓
+                    </div>
+                </div>
+
+                <h3>
+                    Pendidikan Berkualitas
+                </h3>
+
+                <p>
+                    Mendukung proses pembelajaran mahasiswa melalui
+                    kegiatan akademik yang terarah dan lingkungan
+                    belajar yang positif.
+                </p>
+
+                <div class="card-arrow">
+                    →
+                </div>
+
+            </article>
+
+
+            <article class="keunggulan-card">
+
+                <div class="card-top">
+                    <span>02</span>
+
+                    <div class="card-icon blue">
+                        ◈
+                    </div>
+                </div>
+
+                <h3>
+                    Teknologi & Inovasi
+                </h3>
+
+                <p>
+                    Mendorong pemanfaatan teknologi sebagai bagian
+                    dari proses pembelajaran dan pengembangan
+                    kemampuan mahasiswa.
+                </p>
+
+                <div class="card-arrow">
+                    →
+                </div>
+
+            </article>
+
+
+            <article class="keunggulan-card">
+
+                <div class="card-top">
+                    <span>03</span>
+
+                    <div class="card-icon green">
+                        ↗
+                    </div>
+                </div>
+
+                <h3>
+                    Pengembangan Potensi
+                </h3>
+
+                <p>
+                    Memberikan ruang bagi mahasiswa untuk
+                    mengembangkan kreativitas, kemampuan,
+                    dan pengalaman.
+                </p>
+
+                <div class="card-arrow">
+                    →
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LAYANAN ================= -->
+
+    <section class="layanan" id="layanan">
+
+        <div class="layanan-inner section">
+
+            <div class="section-label putih">
+                LAYANAN DIGITAL
+            </div>
+
+
+            <div class="layanan-header">
+
+                <h2>
+                    Semua dalam
+                    <span>satu ruang.</span>
+                </h2>
+
+                <p>
+                    Contoh layanan digital yang dapat membantu
+                    mahasiswa dalam menjalankan aktivitas akademik
+                    dan pembelajaran.
+                </p>
+
+            </div>
+
+
+            <div class="layanan-list">
+
+                <article class="layanan-card">
+
+                    <div class="layanan-nomor">
+                        01
+                    </div>
+
+                    <div class="layanan-icon">
+                        📖
+                    </div>
+
+                    <div class="layanan-info">
+
+                        <h3>
+                            Informasi Akademik
+                        </h3>
+
+                        <p>
+                            Informasi mengenai jadwal, kegiatan
+                            perkuliahan, dan aktivitas akademik
+                            mahasiswa.
+                        </p>
+
+                    </div>
+
+                    <a href="#" class="layanan-arrow">
+                        →
+                    </a>
+
+                </article>
+
+
+                <article class="layanan-card utama">
+
+                    <div class="layanan-nomor">
+                        02
+                    </div>
+
+                    <div class="layanan-icon">
+                        💻
+                    </div>
+
+                    <div class="layanan-info">
+
+                        <h3>
+                            Pembelajaran Daring
+                        </h3>
+
+                        <p>
+                            Ruang pembelajaran untuk materi,
+                            tugas, dan aktivitas perkuliahan
+                            secara daring.
+                        </p>
+
+                    </div>
+
+                    <a href="#" class="layanan-arrow">
+                        →
+                    </a>
+
+                </article>
+
+
+                <article class="layanan-card">
+
+                    <div class="layanan-nomor">
+                        03
+                    </div>
+
+                    <div class="layanan-icon">
+                        🎓
+                    </div>
+
+                    <div class="layanan-info">
+
+                        <h3>
+                            Informasi Mahasiswa
+                        </h3>
+
+                        <p>
+                            Informasi mengenai kegiatan dan
+                            layanan yang tersedia untuk mahasiswa.
+                        </p>
+
+                    </div>
+
+                    <a href="#" class="layanan-arrow">
+                        →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta" id="kontak">
+
+        <div class="cta-bg">
+            UMPKU
+        </div>
+
+
+        <div class="cta-content">
+
+            <div class="section-label putih">
+                PRAKTIKUM PEMROGRAMAN WEB
+            </div>
+
+            <h2>
+                Masa depan dimulai
+                <span>dari langkah hari ini.</span>
+            </h2>
+
+            <p>
+                Terus belajar, terus berkembang,
+                dan jadilah bagian dari perubahan.
+            </p>
+
+            <a href="#beranda" class="cta-button">
+                Kembali ke Beranda ↑
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <img src="logo-umpku.jpg" alt="Logo UMPKU">
+
+                <div>
+                    <strong>UMPKU</strong>
+
+                    <span>
+                        Universitas Muhammadiyah PKU Surakarta
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="footer-tagline">
+                Pendidikan • Teknologi • Inovasi
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Universitas Muhammadiyah PKU Surakarta
+            </p>
+
+            <p>
+                Praktikum Pemrograman Web
+            </p>
+
+        </div>
+
+    </footer>
+
 </body>
 </html>
-<div class="kotak">Kotak pertama</div>
-<div class="kotak">Kotak kedua</div>
-.kotak {
- box-sizing: border-box;
- width: 240px;
- padding: 20px;
- border: 2px solid #1b3c6b;
- margin-bottom: 24px;
- background-color: #eef3f8;
-}
