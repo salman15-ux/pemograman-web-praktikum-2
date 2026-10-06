@@ -8,76 +8,18 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
 }
+
 
 body {
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family: "Inter", sans-serif;
 
-    color: #18304d;
-    background: #f6f9fc;
-
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-/* =====================================
-   HERO
-===================================== */
-
-.hero {
-    position: relative;
-
-    min-height: 720px;
-
-    overflow: hidden;
+    background: #f3f5f8;
 
     color: white;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(5, 31, 60, 0.97) 0%,
-            rgba(9, 53, 94, 0.88) 45%,
-            rgba(12, 61, 105, 0.55) 100%
-        ),
-        url("logo-umpku.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    isolation: isolate;
-}
-
-
-/*
-   Lapisan dekorasi
-*/
-
-.hero::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(255, 255, 255, 0.03) 50%,
-            transparent 100%
-        );
-
-    z-index: -1;
 }
 
 
@@ -86,1047 +28,639 @@ a {
 ===================================== */
 
 .navbar {
-    position: relative;
-    z-index: 10;
 
-    width: 90%;
-    max-width: 1250px;
+    width: 100%;
 
-    margin: auto;
+    height: 85px;
 
-    padding: 1rem 0;
+    padding: 0 7%;
 
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
-    border-bottom:
-        1px solid rgba(255,255,255,0.18);
+    background: white;
+
+    color: #243b6b;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
 }
 
 
 /* LOGO */
 
 .logo {
+
     display: flex;
 
     align-items: center;
 
-    gap: 0.7rem;
+    gap: 12px;
 
-    color: white;
+    font-size: 14px;
+
+    font-weight: 700;
 }
 
-.logo img {
-    width: 55px;
-    height: 55px;
 
-    object-fit: contain;
+.logo-icon {
+
+    width: 42px;
+
+    height: 42px;
 
     border-radius: 50%;
 
-    background: white;
+    display: flex;
 
-    padding: 3px;
-}
+    align-items: center;
 
-.logo-text strong {
-    display: block;
+    justify-content: center;
 
-    font-size: 1.25rem;
+    background: #2864df;
 
-    letter-spacing: 2px;
-}
+    color: white;
 
-.logo-text span {
-    display: block;
+    font-size: 13px;
 
-    color: #d3e0ee;
+    font-weight: 800;
 
-    font-size: 0.75rem;
+    box-shadow: 0 5px 15px rgba(40, 100, 223, 0.3);
 }
 
 
 /* MENU */
 
-.nav-menu {
-    display: flex;
-
-    align-items: center;
-
-    gap: 0.3rem;
-}
-
-.nav-menu a {
-    position: relative;
-
-    padding: 0.6rem 0.8rem;
-
-    color: #d4dfeb;
-
-    font-size: 0.82rem;
-
-    transition: 0.25s ease;
-}
-
-.nav-menu a::after {
-    content: "";
-
-    position: absolute;
-
-    bottom: 0;
-    left: 50%;
-
-    width: 0;
-    height: 2px;
-
-    background: #f7941d;
-
-    transform: translateX(-50%);
-
-    transition: 0.25s ease;
-}
-
-.nav-menu a:hover,
-.nav-menu a.active {
-    color: white;
-}
-
-.nav-menu a:hover::after,
-.nav-menu a.active::after {
-    width: 70%;
-}
-
-
-/* TOMBOL NAVBAR */
-
-.nav-button {
-    padding: 0.65rem 1rem;
-
-    color: white;
-
-    border:
-        1px solid #f7941d;
-
-    border-radius: 50px;
-
-    font-size: 0.75rem;
-    font-weight: bold;
-
-    transition: 0.25s ease;
-}
-
-.nav-button:hover {
-    color: #123250;
-
-    background: #f7941d;
-}
-
-
-/* =====================================
-   HERO CONTENT
-===================================== */
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-
-    width: 90%;
-    max-width: 1250px;
-
-    margin: auto;
-
-    padding-top: 8rem;
-}
-
-.hero-label {
-    display: inline-block;
-
-    margin-bottom: 1.3rem;
-
-    padding: 0.5rem 0.9rem;
-
-    color: #ffad43;
-
-    border:
-        1px solid rgba(247,148,29,0.6);
-
-    border-radius: 50px;
-
-    font-size: 0.7rem;
-    font-weight: bold;
-
-    letter-spacing: 1.5px;
-}
-
-.hero h1 {
-    max-width: 800px;
-
-    font-size:
-        clamp(2.8rem, 6vw, 5.2rem);
-
-    line-height: 1.05;
-
-    letter-spacing: -3px;
-}
-
-.hero h1 span {
-    display: block;
-
-    color: #f7941d;
-}
-
-.hero-content > p {
-    max-width: 620px;
-
-    margin-top: 1.5rem;
-
-    color: #d7e4ef;
-
-    font-size: 1rem;
-}
-
-
-/* =====================================
-   HERO BUTTON
-===================================== */
-
-.hero-buttons {
-    display: flex;
-
-    gap: 0.8rem;
-
-    margin-top: 2rem;
-}
-
-.btn-primary,
-.btn-outline {
-    display: inline-flex;
-
-    align-items: center;
-    gap: 0.8rem;
-
-    padding: 0.85rem 1.25rem;
-
-    border-radius: 50px;
-
-    font-size: 0.8rem;
-    font-weight: bold;
-
-    transition: 0.25s ease;
-}
-
-.btn-primary {
-    color: white;
-
-    background: #f7941d;
-
-    box-shadow:
-        0 10px 30px rgba(247,148,29,0.2);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-
-    background: #ffab3c;
-}
-
-.btn-outline {
-    color: white;
-
-    border:
-        1px solid rgba(255,255,255,0.6);
-}
-
-.btn-outline:hover {
-    background: white;
-
-    color: #15395d;
-}
-
-
-/* =====================================
-   HERO SIDE TEXT
-===================================== */
-
-.hero-side-text {
-    position: absolute;
-
-    right: 5%;
-    top: 35%;
-
-    color: rgba(255,255,255,0.8);
-
-    font-family: Georgia, serif;
-
-    font-size: 1.5rem;
-
-    font-style: italic;
-
-    line-height: 1.25;
-
-    transform: rotate(-5deg);
-}
-
-.hero-side-text::after {
-    content: "";
-
-    display: block;
-
-    width: 55px;
-    height: 3px;
-
-    margin-top: 0.4rem;
-    margin-left: 2rem;
-
-    background: #f7941d;
-
-    transform: rotate(-10deg);
-}
-
-
-/* =====================================
-   HERO BOTTOM
-===================================== */
-
-.hero-bottom {
-    position: absolute;
-
-    left: 5%;
-    right: 5%;
-    bottom: 1.5rem;
+.navbar nav {
 
     display: flex;
 
     align-items: center;
 
-    gap: 1rem;
-
-    color: #a8bdd0;
-
-    font-size: 0.65rem;
-
-    letter-spacing: 1.5px;
-}
-
-.hero-bottom strong {
-    display: block;
-
-    color: white;
-
-    text-align: center;
-
-    font-size: 1.2rem;
-}
-
-.hero-line {
-    flex: 1;
-
-    height: 1px;
-
-    background:
-        rgba(255,255,255,0.25);
-}
-
-.tahun strong {
-    display: inline;
-
-    color: white;
+    gap: 28px;
 }
 
 
-/* =====================================
-   SECTION
-===================================== */
+.navbar nav a {
 
-.section {
-    width: 90%;
-    max-width: 1200px;
+    text-decoration: none;
 
-    margin: auto;
+    color: #29416d;
 
-    padding: 6rem 0;
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
 }
 
-.section-label {
-    margin-bottom: 1.2rem;
 
-    color: #1b5b91;
+.navbar nav a:hover {
 
-    font-size: 0.7rem;
-    font-weight: bold;
-
-    letter-spacing: 2.5px;
+    color: #2864df;
 }
 
-.section-label::before {
-    content: "";
 
-    display: inline-block;
+.navbar nav .active {
 
-    width: 25px;
-    height: 2px;
+    background: #dce7ff;
 
-    margin-right: 0.6rem;
+    color: #2864df;
 
-    vertical-align: middle;
+    padding: 12px 20px;
 
-    background: #f7941d;
-}
-
-.putih {
-    color: #f7941d;
+    border-radius: 30px;
 }
 
 
 /* =====================================
-   PROFIL
+   HERO
 ===================================== */
 
-.profil {
-    background: white;
-}
+.hero {
 
-.profil-grid {
-    display: grid;
+    width: 88%;
 
-    grid-template-columns: 1fr 1fr;
+    min-height: 690px;
 
-    gap: 6rem;
-}
+    margin: 35px auto;
 
-.profil-title h2 {
-    max-width: 500px;
+    display: flex;
 
-    color: #12385e;
-
-    font-size:
-        clamp(2.4rem, 5vw, 4rem);
-
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-}
-
-.profil-title h2 span {
-    display: block;
-
-    color: #f7941d;
-}
-
-.profil-text {
-    color: #66788c;
-
-    font-size: 0.92rem;
-}
-
-.profil-text .teks-besar {
-    margin-bottom: 1.2rem;
-
-    color: #36516d;
-
-    font-size: 1.1rem;
-}
-
-.text-button {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 0.8rem;
-
-    margin-top: 1.5rem;
-
-    padding-bottom: 0.3rem;
-
-    color: #12385e;
-
-    border-bottom:
-        1px solid #12385e;
-
-    font-weight: bold;
-
-    font-size: 0.85rem;
-}
-
-
-/* =====================================
-   PROFIL BAWAH
-===================================== */
-
-.profil-bawah {
-    display: grid;
-
-    grid-template-columns:
-        1.3fr 1fr;
-
-    gap: 2rem;
-
-    margin-top: 4rem;
-}
-
-
-/*
-   Karena belum memakai foto gedung,
-   dibuat visual kartu kampus.
-*/
-
-.foto-kampus {
     position: relative;
-
-    min-height: 320px;
 
     overflow: hidden;
 
-    border-radius: 20px;
+    border-radius: 35px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #174c7b,
-            #0a2d50
-        );
+    background: #45413d;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
-.foto-kampus::before {
-    content: "UMPKU";
 
-    position: absolute;
+/* =====================================
+   CONTENT
+===================================== */
 
-    right: 30px;
-    bottom: 10px;
+.content {
 
-    color: rgba(255,255,255,0.06);
+    width: 57%;
 
-    font-size: 8rem;
+    padding: 65px 0 60px 75px;
 
-    font-weight: bold;
+    position: relative;
+
+    z-index: 10;
 }
 
-.foto-overlay {
-    position: absolute;
 
-    width: 220px;
-    height: 220px;
+/* =====================================
+   CATEGORY
+===================================== */
 
-    top: 40px;
-    left: 50px;
+.category {
+
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #2864df;
 
     border-radius: 30px;
 
-    border:
-        1px solid rgba(255,255,255,0.2);
+    font-size: 13px;
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(247,148,29,0.8),
-            rgba(247,148,29,0.05)
-        );
-}
+    font-weight: 700;
 
-.foto-caption {
-    position: absolute;
+    letter-spacing: 1px;
 
-    left: 2rem;
-    bottom: 2rem;
-
-    display: flex;
-
-    flex-direction: column;
-
-    color: white;
-}
-
-.foto-caption strong {
-    font-size: 2rem;
-
-    letter-spacing: 3px;
-}
-
-.foto-caption span {
-    color: #b9cad9;
-
-    font-size: 0.75rem;
-}
-
-
-/* =====================================
-   POIN
-===================================== */
-
-.profil-poin {
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 1rem;
-}
-
-.poin {
-    padding: 1.5rem;
-
-    border:
-        1px solid #e3e9ef;
-
-    border-radius: 15px;
-
-    background: #f9fbfd;
-
-    transition: 0.25s ease;
-}
-
-.poin:hover {
-    transform: translateY(-5px);
-
-    border-color: #f7941d;
+    margin-bottom: 38px;
 
     box-shadow:
-        0 15px 30px rgba(18,56,94,0.08);
-}
-
-.poin-icon {
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 1rem;
-
-    color: #f7941d;
-
-    background: #fff2e3;
-
-    border-radius: 10px;
-}
-
-.poin strong {
-    display: block;
-
-    color: #f7941d;
-
-    font-size: 0.75rem;
-}
-
-.poin span {
-    color: #183b5e;
-
-    font-size: 0.82rem;
-    font-weight: bold;
+        0 8px 20px rgba(40, 100, 223, 0.3);
 }
 
 
 /* =====================================
-   KEUNGGULAN
+   TEXT
 ===================================== */
 
-.keunggulan {
-    background: #f5f8fb;
+.small-title {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+    color: #f0f0f0;
 }
 
-.keunggulan-header {
+
+h1 {
+
+    font-size: 57px;
+
+    line-height: 1.02;
+
+    letter-spacing: -2.5px;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+
+h1 span {
+
+    color: #6d96ff;
+}
+
+
+.description {
+
+    width: 530px;
+
+    max-width: 90%;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #e4e4e4;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================
+   PROFILE INFORMATION
+===================================== */
+
+.profile-info {
+
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 5rem;
+    gap: 13px 30px;
 
-    align-items: end;
+    margin-bottom: 30px;
 
-    margin-bottom: 3rem;
+    max-width: 560px;
 }
 
-.keunggulan-header h2 {
-    color: #12385e;
 
-    font-size:
-        clamp(2.5rem, 5vw, 4rem);
+.info-item {
 
-    line-height: 1;
+    display: flex;
 
-    letter-spacing: -2px;
+    align-items: center;
+
+    gap: 11px;
 }
 
-.keunggulan-header h2 span {
+
+.info-item .square {
+
+    width: 11px;
+
+    height: 11px;
+
+    flex-shrink: 0;
+
+    background: #2864df;
+
+    border-radius: 2px;
+}
+
+
+.info-item span {
+
     display: block;
 
-    color: #f7941d;
-}
+    color: #bdbdbd;
 
-.keunggulan-header > p {
-    color: #6d7e91;
+    font-size: 10px;
 
-    font-size: 0.9rem;
-}
-
-
-/* =====================================
-   KEUNGGULAN CARD
-===================================== */
-
-.keunggulan-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 1rem;
-}
-
-.keunggulan-card {
-    position: relative;
-
-    min-height: 350px;
-
-    padding: 2rem;
-
-    background: white;
-
-    border:
-        1px solid #e1e8ef;
-
-    border-radius: 18px;
-
-    transition:
-        0.3s ease;
-}
-
-.keunggulan-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 20px 45px rgba(18,56,94,0.1);
-}
-
-.card-top {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card-top > span {
-    color: #a2b0be;
-
-    font-size: 0.75rem;
-}
-
-.card-icon {
-    width: 50px;
-    height: 50px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    font-size: 1.2rem;
-}
-
-.orange {
-    color: #f7941d;
-
-    background: #fff0dd;
-}
-
-.blue {
-    color: #1a5c94;
-
-    background: #e9f3fb;
-}
-
-.green {
-    color: #249067;
-
-    background: #e8f7f0;
-}
-
-.keunggulan-card h3 {
-    margin-top: 6rem;
-
-    margin-bottom: 0.8rem;
-
-    color: #12385e;
-
-    font-size: 1.2rem;
-}
-
-.keunggulan-card p {
-    color: #728294;
-
-    font-size: 0.83rem;
-}
-
-.card-arrow {
-    position: absolute;
-
-    right: 2rem;
-    bottom: 1.5rem;
-
-    color: #f7941d;
-
-    font-size: 1.5rem;
+    margin-bottom: 2px;
 }
 
 
-/* =====================================
-   LAYANAN
-===================================== */
+.info-item strong {
 
-.layanan {
-    color: white;
-
-    background:
-        linear-gradient(
-            110deg,
-            #082d52,
-            #0c4778
-        );
-
-    overflow: hidden;
-}
-
-.layanan-inner {
-    position: relative;
-}
-
-.layanan-header {
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 5rem;
-
-    align-items: end;
-
-    margin-bottom: 3rem;
-}
-
-.layanan-header h2 {
-    font-size:
-        clamp(2.5rem, 5vw, 4rem);
-
-    line-height: 1;
-
-    letter-spacing: -2px;
-}
-
-.layanan-header h2 span {
     display: block;
 
-    color: #f7941d;
-}
+    font-size: 11px;
 
-.layanan-header > p {
-    color: #b8cada;
+    font-weight: 600;
 
-    font-size: 0.9rem;
+    color: white;
 }
 
 
 /* =====================================
-   LAYANAN CARD
+   BUTTON
 ===================================== */
 
-.layanan-list {
-    border-top:
-        1px solid rgba(255,255,255,0.18);
-}
-
-.layanan-card {
-    display: grid;
-
-    grid-template-columns:
-        60px 65px 1fr 50px;
-
-    gap: 1.5rem;
-
-    align-items: center;
-
-    padding: 1.5rem 0;
-
-    border-bottom:
-        1px solid rgba(255,255,255,0.18);
-
-    transition: 0.25s ease;
-}
-
-.layanan-card:hover {
-    padding-left: 1rem;
-
-    background:
-        rgba(255,255,255,0.04);
-}
-
-.layanan-card.utama {
-    margin: 0 -1rem;
-
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    border:
-        1px solid #f7941d;
-
-    background:
-        rgba(247,148,29,0.08);
-
-    border-radius: 12px;
-}
-
-.layanan-nomor {
-    color: #8ea8be;
-
-    font-size: 0.75rem;
-}
-
-.layanan-icon {
-    width: 50px;
-    height: 50px;
+.button-area {
 
     display: flex;
 
     align-items: center;
-    justify-content: center;
 
-    color: #153b60;
-
-    background: white;
-
-    border-radius: 12px;
-
-    font-size: 1.3rem;
+    gap: 30px;
 }
 
-.layanan-info h3 {
-    margin-bottom: 0.3rem;
 
-    font-size: 1.05rem;
-}
+.btn-daftar {
 
-.layanan-info p {
-    max-width: 600px;
-
-    color: #aac0d2;
-
-    font-size: 0.8rem;
-}
-
-.layanan-arrow {
-    width: 38px;
-    height: 38px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
+    text-decoration: none;
 
     color: white;
 
-    border:
-        1px solid rgba(255,255,255,0.3);
+    background: #2864df;
 
-    border-radius: 50%;
+    padding: 15px 25px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
 }
 
 
-/* =====================================
-   CTA
-===================================== */
-
-.cta {
-    position: relative;
-
-    min-height: 430px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    overflow: hidden;
-
-    color: white;
-
-    background: #071f3b;
-}
-
-.cta-bg {
-    position: absolute;
-
-    color:
-        rgba(255,255,255,0.025);
-
-    font-size: 15rem;
-
-    font-weight: bold;
-}
-
-.cta-content {
-    position: relative;
-
-    z-index: 2;
-}
-
-.cta h2 {
-    max-width: 850px;
-
-    margin: auto;
-
-    font-size:
-        clamp(2.5rem, 5vw, 4.5rem);
-
-    line-height: 1;
-
-    letter-spacing: -2px;
-}
-
-.cta h2 span {
-    display: block;
-
-    color: #f7941d;
-}
-
-.cta-content p {
-    margin-top: 1rem;
-
-    color: #b9cbdc;
-}
-
-.cta-button {
-    display: inline-block;
-
-    margin-top: 2rem;
-
-    padding: 0.8rem 1.3rem;
-
-    color: #12385e;
-
-    background: white;
-
-    border-radius: 50px;
-
-    font-size: 0.8rem;
-    font-weight: bold;
-
-    transition: 0.25s ease;
-}
-
-.cta-button:hover {
-    color: white;
-
-    background: #f7941d;
+.btn-daftar:hover {
 
     transform: translateY(-3px);
+
+    background: #174dbd;
+
+    box-shadow:
+        0 8px 20px rgba(40, 100, 223, 0.4);
+}
+
+
+.learn {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.learn:hover {
+
+    color: #6d96ff;
+}
+
+
+/* =====================================
+   VISUAL
+===================================== */
+
+.visual {
+
+    width: 43%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =====================================
+   CIRCLE
+===================================== */
+
+.circle {
+
+    width: 470px;
+
+    height: 470px;
+
+    position: absolute;
+
+    top: 80px;
+
+    left: -35px;
+
+    border: 4px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 50%;
+}
+
+
+.circle::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 320px;
+
+    border: 2px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 50%;
+
+    top: 70px;
+
+    left: 70px;
+}
+
+
+/* =====================================
+   DOT
+===================================== */
+
+.circle-dot {
+
+    position: absolute;
+
+    width: 17px;
+
+    height: 17px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.13);
+}
+
+
+.dot1 {
+
+    top: 130px;
+
+    left: 350px;
+}
+
+
+.dot2 {
+
+    top: 340px;
+
+    left: 250px;
+}
+
+
+/* =====================================
+   PROFILE CARD
+===================================== */
+
+.speaker-card {
+
+    position: absolute;
+
+    z-index: 20;
+
+    top: 330px;
+
+    left: 20px;
+
+    width: 245px;
+
+    padding: 20px 22px;
+
+    background: #2864df;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.speaker-title {
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+}
+
+
+.speaker-card p {
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: white;
+}
+
+
+/* =====================================
+   FOTO
+===================================== */
+
+.person {
+
+    position: absolute;
+
+    z-index: 10;
+
+    bottom: -20px;
+
+    right: -55px;
+
+    width: 410px;
+
+    height: 620px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+}
+
+
+.person img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    display: block;
+
+    border-radius: 180px 180px 0 0;
+
+    filter: saturate(0.95);
+
+    box-shadow:
+        -15px 0 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================
+   BOTTOM
+===================================== */
+
+.bottom {
+
+    width: 88%;
+
+    margin: -10px auto 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    color: #2864df;
+}
+
+
+.ticket span {
+
+    display: block;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 7px;
+}
+
+
+.ticket-box {
+
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    background: white;
+
+    border: 1px solid #2864df;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    color: #2864df;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.ticket-box:hover {
+
+    background: #2864df;
+
+    color: white;
+}
+
+
+.pencil {
+
+    font-size: 42px;
+
+    color: #555;
+
+    transform: rotate(-20deg);
+}
+
+
+.label {
+
+    margin-left: auto;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
 }
 
 
@@ -1134,73 +668,19 @@ a {
    FOOTER
 ===================================== */
 
-.footer {
-    padding: 2.5rem 5%;
+footer {
 
-    color: #9eb2c6;
+    text-align: center;
 
-    background: #04172d;
-}
-
-.footer-top {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    padding-bottom: 2rem;
-
-    border-bottom:
-        1px solid rgba(255,255,255,0.1);
-}
-
-.footer-brand {
-    display: flex;
-
-    align-items: center;
-
-    gap: 0.8rem;
-}
-
-.footer-brand img {
-    width: 48px;
-    height: 48px;
-
-    object-fit: contain;
+    padding: 30px 20px;
 
     background: white;
 
-    border-radius: 50%;
-}
+    color: #53627a;
 
-.footer-brand strong {
-    display: block;
+    font-size: 11px;
 
-    color: white;
-
-    letter-spacing: 2px;
-}
-
-.footer-brand span {
-    display: block;
-
-    font-size: 0.7rem;
-}
-
-.footer-tagline {
-    font-size: 0.75rem;
-}
-
-.footer-bottom {
-    display: flex;
-
-    justify-content: space-between;
-
-    padding-top: 1.5rem;
-
-    font-size: 0.7rem;
-
-    color: #6f859a;
+    line-height: 1.8;
 }
 
 
@@ -1208,111 +688,199 @@ a {
    TABLET
 ===================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
 
-    .nav-menu {
-        display: none;
+    .navbar {
+
+        padding: 0 4%;
     }
 
-    .hero-content {
-        padding-top: 7rem;
+
+    .hero {
+
+        width: 94%;
     }
 
-    .profil-grid,
-    .keunggulan-header,
-    .layanan-header {
-        grid-template-columns: 1fr;
 
-        gap: 2rem;
+    .content {
+
+        padding-left: 45px;
     }
 
-    .profil-bawah {
-        grid-template-columns: 1fr;
+
+    h1 {
+
+        font-size: 48px;
     }
 
-    .keunggulan-grid {
-        grid-template-columns: 1fr;
+
+    .description {
+
+        width: 450px;
     }
+
+
+    .person {
+
+        width: 350px;
+
+        right: -50px;
+    }
+
 }
 
 
 /* =====================================
-   HP
+   MOBILE
 ===================================== */
 
-@media (max-width: 600px) {
-
-    .hero {
-        min-height: 700px;
-    }
+@media (max-width: 750px) {
 
     .navbar {
-        width: 92%;
+
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 18px;
     }
 
-    .nav-button {
-        display: none;
+
+    .navbar nav {
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
     }
 
-    .hero-content {
-        width: 92%;
 
-        padding-top: 6rem;
+    .navbar nav a {
+
+        font-size: 11px;
     }
 
-    .hero h1 {
-        font-size: 3rem;
+
+    .hero {
+
+        width: 94%;
+
+        flex-direction: column;
+
+        min-height: 1100px;
+
+        margin-top: 20px;
+    }
+
+
+    .content {
+
+        width: 100%;
+
+        padding: 40px 28px 30px;
+    }
+
+
+    .category {
+
+        margin-bottom: 30px;
+    }
+
+
+    h1 {
+
+        font-size: 42px;
 
         letter-spacing: -2px;
     }
 
-    .hero-side-text {
-        display: none;
+
+    .description {
+
+        width: 100%;
+
+        max-width: 100%;
     }
 
-    .hero-buttons {
+
+    .profile-info {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .button-area {
+
         flex-direction: column;
 
         align-items: flex-start;
+
+        gap: 18px;
     }
 
-    .hero-bottom {
-        display: none;
+
+    .visual {
+
+        width: 100%;
+
+        height: 480px;
     }
 
 
-    .section {
+    .circle {
+
+        width: 380px;
+
+        height: 380px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        top: 30px;
+    }
+
+
+    .speaker-card {
+
+        top: 220px;
+
+        left: 20px;
+
+        width: 220px;
+    }
+
+
+    .person {
+
+        width: 300px;
+
+        height: 430px;
+
+        right: -30px;
+
+        bottom: 0;
+    }
+
+
+    .bottom {
+
         width: 90%;
 
-        padding: 4.5rem 0;
+        flex-wrap: wrap;
+
+        margin-top: 20px;
     }
 
 
-    .profil-poin {
-        grid-template-columns: 1fr;
+    .label {
+
+        margin-left: 0;
     }
 
-
-    .layanan-card {
-        grid-template-columns:
-            35px 50px 1fr;
-    }
-
-    .layanan-arrow {
-        display: none;
-    }
-
-
-    .footer-top,
-    .footer-bottom {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 1rem;
-    }
-
-    .footer-tagline {
-        display: none;
-    }
 }
