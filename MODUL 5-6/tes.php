@@ -1,3 +1,0 @@
-<?php
-echo "WEBSITE MODUL 5-6 BERHASIL DIBUKA!";
-?>
