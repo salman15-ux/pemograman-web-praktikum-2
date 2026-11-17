@@ -69,3 +69,72 @@ footer {
     color: #64748b;
     font-size: 14px;
 }
+/* DESAIN HALAMAN LOGIN */
+
+.login-page {
+    background: linear-gradient(135deg, #087e8b, #063b52);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 35px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+}
+
+.login-icon {
+    width: 75px;
+    height: 75px;
+    background: #e0f5f5;
+    color: #087e8b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 40px;
+}
+
+.login-container h3 {
+    color: #087e8b;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.login-description {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.login-container .form-control {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.btn-login {
+    background: #087e8b;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-login:hover {
+    background: #066570;
+    color: white;
+}
+
+.login-footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #94a3b8;
+}

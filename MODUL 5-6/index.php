@@ -1,7 +1,11 @@
 <?php
+include 'auth.php';
 include 'config.php';
 
-$query = mysqli_query($conn, "SELECT * FROM alat ORDER BY id DESC");
+$query = mysqli_query(
+    $conn,
+    "SELECT * FROM alat ORDER BY id DESC"
+);
 ?>
 
 <!DOCTYPE html>
@@ -19,10 +23,25 @@ $query = mysqli_query($conn, "SELECT * FROM alat ORDER BY id DESC");
 
 <nav class="navbar navbar-dark">
     <div class="container">
+
         <span class="navbar-brand fw-bold">
             MEDICAL EQUIPMENT
         </span>
-        <span class="text-white">Sistem Informasi Alat Elektromedis</span>
+
+        <div class="d-flex align-items-center gap-3">
+
+            <span class="text-white">
+                Halo, <?= htmlspecialchars($_SESSION['username']); ?>
+            </span>
+
+            <a href="logout.php"
+               class="btn btn-danger btn-sm"
+               onclick="return confirm('Yakin ingin logout?')">
+                Logout
+            </a>
+
+        </div>
+
     </div>
 </nav>
 

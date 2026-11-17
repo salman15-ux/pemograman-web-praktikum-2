@@ -1,4 +1,5 @@
 <?php
+include 'auth.php';
 include 'config.php';
 
 if (!isset($_GET['id']) || !ctype_digit($_GET['id'])) {

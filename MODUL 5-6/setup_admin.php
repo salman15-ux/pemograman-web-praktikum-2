@@ -1,25 +1,66 @@
+
 <?php
 include 'config.php';
 
+// Data akun admin
 $username = "admin";
-$password = password_hash("admin123", PASSWORD_DEFAULT);
+$password = "admin123";
 
-$stmt = mysqli_prepare(
+// Cek apakah username sudah tersedia
+$cek = mysqli_prepare(
     $conn,
-    "INSERT INTO users (username, password)
-     VALUES (?, ?)"
+    "SELECT id FROM users WHERE username = ?"
 );
 
-mysqli_stmt_bind_param(
-    $stmt,
-    "ss",
-    $username,
-    $password
-);
+mysqli_stmt_bind_param($cek, "s", $username);
+mysqli_stmt_execute($cek);
 
-if (mysqli_stmt_execute($stmt)) {
-    echo "Akun admin berhasil dibuat!";
+$result = mysqli_stmt_get_result($cek);
+
+if (mysqli_num_rows($result) > 0) {
+
+    // Jika sudah ada, perbarui password
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+    $update = mysqli_prepare(
+        $conn,
+        "UPDATE users SET password = ? WHERE username = ?"
+    );
+
+    mysqli_stmt_bind_param(
+        $update,
+        "ss",
+        $password_hash,
+        $username
+    );
+
+    if (mysqli_stmt_execute($update)) {
+        echo "PASSWORD ADMIN BERHASIL DIPERBARUI!";
+    } else {
+        echo "GAGAL MEMPERBARUI PASSWORD: " . mysqli_error($conn);
+    }
+
 } else {
-    echo "Gagal membuat akun. Username mungkin sudah digunakan.";
+
+    // Jika belum ada, buat akun baru
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+    $insert = mysqli_prepare(
+        $conn,
+        "INSERT INTO users (username, password) VALUES (?, ?)"
+    );
+
+    mysqli_stmt_bind_param(
+        $insert,
+        "ss",
+        $username,
+        $password_hash
+    );
+
+    if (mysqli_stmt_execute($insert)) {
+        echo "AKUN ADMIN BERHASIL DIBUAT!";
+    } else {
+        echo "GAGAL MEMBUAT ADMIN: " . mysqli_error($conn);
+    }
 }
 ?>
